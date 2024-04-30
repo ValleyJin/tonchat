@@ -1,0 +1,17 @@
+# enumerate all the packages needed for the project
+langchain == 0.1.7
+langchain-community == 0.0.20
+openai == 0.28.1 #openai API version should be 0.28.1
+pypdf2 == 3.0.1 # pypdf version should be 2
+chromadb
+tiktoken
+
+streamlit == 1.32.0
+streamlit-extras == 0.4.0
+datetime
+
+python-dotenv
+faiss-cpu == 1.7.4 # faiss for python 3.10.x
+huggingface-hub
+instructorembedding
+sentence_transformers
