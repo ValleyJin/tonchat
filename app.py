@@ -140,7 +140,7 @@ def is_admin(_input_key):
 ######################################################
 
 def main() :
-    load_dotenv()
+    load_dotenv('/Users/eugene/Dropbox/0_Dev/07_LLM/project/env_folder/tonchat_deploy_key/.env')
     st.set_page_config(page_title="TONchat", page_icon=":books:", layout="wide")
     # css, html관련 설정은 실제 대화관련 함수보다 앞에서 미리 실행해야 한다.
     st.write(css, unsafe_allow_html=True)
@@ -215,8 +215,8 @@ def main() :
                     # 따라서 이러한 초기화 및 생성이 반복되면 안되고 하나의 대화 세션으로 고정해주는 st.sessiion_state 객체안에 대화를 저장해야 날아가지 않음
                     # conversation이라는 속성을 신설하고 그 안에 대화내용을 key, value 쌍으로 저장 (딕셔너리 자료형)
                     st.session_state.conversation = get_conversation_chain(vectorstore)
-            else:
-                st.write("You are not admin")
+        else:
+            st.write("You are not admin")
 
 if __name__ == "__main__":
     main()
